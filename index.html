@@ -811,9 +811,17 @@
                       
 
                       <button type="submit" class="btn">Send Message</button>
+                      <p id="form-status" style="display:none; color:green; margin-top:10px;">✅ Message sent!</p>
                     </div>
                   </div>
                 </form>
+                <script>
+                  document.querySelector('form').addEventListener('submit', function() {
+                    setTimeout(() => {
+                      document.getElementById('form-status').style.display = 'block';
+                    }, 2000);
+                  });
+                </script>
               </div>
             </div>
           </div>
